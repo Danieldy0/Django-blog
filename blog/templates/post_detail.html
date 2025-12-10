@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<div class="container mt-5 pt-4"> 
+    
+    <h1 class="display-4 mb-3">{{ post.title }}</h1>
+    
+    <p class="lead text-muted border-bottom pb-2">
+        Posted by **{{ post.author.username }}** on {{ post.created_on|date:"F j, Y" }}
+    </p>
+
+    {% for image in post.images.all %}
+    <figure class="figure mb-4">
+        <img src="{{ image.image.url }}" class="img-fluid rounded" alt="{{ image.caption }}">
+        {% if image.caption %}
+        <figcaption class="figure-caption text-center">{{ image.caption }}</figcaption>
+        {% endif %}
+    </figure>
+    {% endfor %}
+    <div class="blog-content mb-5">
+        {{ post.content|safe }}
+    </div>
+
+    <a href="{% url 'home' %}" class="btn btn-secondary mb-5">&larr; Back to Blog Home</a>
+
+</div>
+{% endblock content %}

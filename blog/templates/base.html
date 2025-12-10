@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>{% block title %}My Bootstrap Page{% endblock %}</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
+<style>
+  /* Global CSS for the Carousel height */
+  .carousel-item img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+  }
+</style>
+</head>
+<body>
+  
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+
+    <a class="navbar-brand d-flex align-items-center" href="/">
+      <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=80&h=80&auto=format&fit=crop"
+           alt="Logo"
+           class="rounded-pill me-2"
+           style="width:40px; height:40px; object-fit:cover;">
+      <span>MyBrand</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+      </ul>
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search">
+        <button class="btn btn-primary" type="button">Search</button>
+      </form>
+    </div>
+
+  </div>
+</nav>
+  {% block content %}
+  {% endblock content %}
+
+<footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container text-md-start">
+    <div class="row">
+
+      <!-- About Section -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+        <h6 class="text-uppercase fw-bold mb-4">MyBrand</h6>
+        <p>
+          Building amazing web experiences with Bootstrap. Stay connected with us for updates and services.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+        <h6 class="text-uppercase fw-bold mb-4">Quick Links</h6>
+        <p><a href="#" class="text-white text-decoration-none">Home</a></p>
+        <p><a href="#" class="text-white text-decoration-none">About</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Services</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Contact</a></p>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+        <p><i class="bi bi-house-door me-2"></i> 123 Main Street, City, Country</p>
+        <p><i class="bi bi-envelope me-2"></i> info@mybrand.com</p>
+        <p><i class="bi bi-phone me-2"></i> +1 234 567 890</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+        <h6 class="text-uppercase fw-bold mb-4">Follow Us</h6>
+        <a href="#" class="btn btn-outline-light btn-floating m-1"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="btn btn-outline-light btn-floating m-1"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="btn btn-outline-light btn-floating m-1"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="btn btn-outline-light btn-floating m-1"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="text-center p-3 mt-3 border-top" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2025 MyBrand. All rights reserved.
+  </div>
+</footer>
+
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
+
+</body>
+</html>
