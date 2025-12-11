@@ -38,3 +38,7 @@ whatthepatch==1.0.7
 whitenoise==6.11.0
 yapf==0.43.0
 zipp==3.23.0
+dj-database-url
+psycopg2-binary
+cloudinary
+dj3-cloudinary-storage
