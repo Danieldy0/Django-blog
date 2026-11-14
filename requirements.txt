@@ -1,8 +1,11 @@
-Django>=4.2,<6.0
+Django>=4.2,<5.0
 gunicorn
 whitenoise
 pillow
 dj-database-url
 psycopg2-binary
+python-dotenv
 cloudinary
 dj3-cloudinary-storage
+sqlparse
+asgiref
