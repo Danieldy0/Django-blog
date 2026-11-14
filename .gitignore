@@ -1,0 +1,13 @@
+# Environment
+.env
+
+# Django generated — never commit these
+staticfiles/
+media/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+db.sqlite3
